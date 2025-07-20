@@ -1,0 +1,71 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nftGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff1493;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#9333ea;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0.3" />
+    </linearGradient>
+    <pattern id="hexPattern" width="30" height="26" patternUnits="userSpaceOnUse">
+      <polygon points="15,2 26,9 26,21 15,28 4,21 4,9" fill="none" stroke="#ff1493" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="240" fill="#0a0a0a"/>
+  <rect width="400" height="240" fill="url(#nftGradient)"/>
+  <rect width="400" height="240" fill="url(#hexPattern)"/>
+  
+  <!-- NFT Marketplace Interface -->
+  <g transform="translate(40, 30)">
+    <!-- Main Container -->
+    <rect x="0" y="0" width="320" height="180" rx="12" fill="rgba(255,255,255,0.1)" stroke="#ff1493" stroke-width="1" opacity="0.9"/>
+    
+    <!-- Header -->
+    <rect x="10" y="10" width="300" height="25" rx="5" fill="rgba(255,20,147,0.2)"/>
+    <text x="20" y="26" font-family="monospace" font-size="11" fill="#ff1493">NFT Marketplace</text>
+    <circle cx="290" cy="22" r="8" fill="rgba(0,255,255,0.3)" stroke="#00ffff" stroke-width="1"/>
+    <text x="285" y="26" font-family="monospace" font-size="8" fill="#00ffff">⚡</text>
+    
+    <!-- NFT Grid -->
+    <g transform="translate(10, 45)">
+      <!-- NFT Card 1 -->
+      <rect x="0" y="0" width="70" height="70" rx="8" fill="rgba(147,51,234,0.3)" stroke="#9333ea" stroke-width="1"/>
+      <rect x="5" y="5" width="60" height="45" rx="4" fill="rgba(0,255,255,0.2)"/>
+      <text x="10" y="60" font-family="monospace" font-size="7" fill="#9333ea">CyberArt #001</text>
+      <text x="10" y="68" font-family="monospace" font-size="6" fill="#00ffff">2.5 ETH</text>
+      
+      <!-- NFT Card 2 -->
+      <rect x="80" y="0" width="70" height="70" rx="8" fill="rgba(255,20,147,0.3)" stroke="#ff1493" stroke-width="1"/>
+      <rect x="85" y="5" width="60" height="45" rx="4" fill="rgba(147,51,234,0.2)"/>
+      <text x="90" y="60" font-family="monospace" font-size="7" fill="#ff1493">NeoPunk #042</text>
+      <text x="90" y="68" font-family="monospace" font-size="6" fill="#9333ea">1.8 ETH</text>
+      
+      <!-- NFT Card 3 -->
+      <rect x="160" y="0" width="70" height="70" rx="8" fill="rgba(0,255,255,0.3)" stroke="#00ffff" stroke-width="1"/>
+      <rect x="165" y="5" width="60" height="45" rx="4" fill="rgba(255,20,147,0.2)"/>
+      <text x="170" y="60" font-family="monospace" font-size="7" fill="#00ffff">Digital #127</text>
+      <text x="170" y="68" font-family="monospace" font-size="6" fill="#ff1493">3.2 ETH</text>
+      
+      <!-- NFT Card 4 -->
+      <rect x="240" y="0" width="70" height="70" rx="8" fill="rgba(255,20,147,0.2)" stroke="#ff1493" stroke-width="1"/>
+      <rect x="245" y="5" width="60" height="45" rx="4" fill="rgba(0,255,255,0.2)"/>
+      <text x="250" y="60" font-family="monospace" font-size="7" fill="#ff1493">Retro #256</text>
+      <text x="250" y="68" font-family="monospace" font-size="6" fill="#00ffff">0.9 ETH</text>
+    </g>
+    
+    <!-- Stats Bar -->
+    <rect x="10" y="125" width="300" height="35" rx="6" fill="rgba(255,255,255,0.05)"/>
+    <text x="20" y="140" font-family="monospace" font-size="8" fill="#00ffff">Volume: 1,245 ETH</text>
+    <text x="20" y="150" font-family="monospace" font-size="8" fill="#ff1493">Collections: 52</text>
+    <text x="150" y="140" font-family="monospace" font-size="8" fill="#9333ea">Users: 8,341</text>
+    <text x="150" y="150" font-family="monospace" font-size="8" fill="#00ffff">Gas Free ⚡</text>
+  </g>
+  
+  <!-- Floating NFT elements -->
+  <rect x="20" y="20" width="15" height="15" rx="3" fill="rgba(255,20,147,0.4)" opacity="0.7">
+    <animateTransform attributeName="transform" type="rotate" values="0 27.5 27.5;360 27.5 27.5" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <polygon points="370,50 380,60 370,70 360,60" fill="rgba(0,255,255,0.5)" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+  </polygon>
+</svg>

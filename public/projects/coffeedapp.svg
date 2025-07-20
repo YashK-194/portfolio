@@ -1,0 +1,57 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="defiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#ff1493;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#9333ea;stop-opacity:0.3" />
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00ffff" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="240" fill="#0a0a0a"/>
+  <rect width="400" height="240" fill="url(#defiGradient)"/>
+  <rect width="400" height="240" fill="url(#grid)"/>
+  
+  <!-- DeFi Interface Elements -->
+  <g transform="translate(50, 40)">
+    <!-- Main Dashboard -->
+    <rect x="0" y="0" width="300" height="160" rx="10" fill="rgba(255,255,255,0.1)" stroke="#00ffff" stroke-width="1" opacity="0.8"/>
+    
+    <!-- Header -->
+    <rect x="10" y="10" width="280" height="30" rx="5" fill="rgba(0,255,255,0.2)"/>
+    <text x="20" y="28" font-family="monospace" font-size="12" fill="#00ffff">DeFi Lending Protocol</text>
+    
+    <!-- Stats Cards -->
+    <rect x="10" y="50" width="85" height="50" rx="5" fill="rgba(255,20,147,0.2)" stroke="#ff1493" stroke-width="1"/>
+    <text x="15" y="68" font-family="monospace" font-size="8" fill="#ff1493">TVL</text>
+    <text x="15" y="85" font-family="monospace" font-size="14" fill="#ff1493">$2.5M</text>
+    
+    <rect x="105" y="50" width="85" height="50" rx="5" fill="rgba(0,255,255,0.2)" stroke="#00ffff" stroke-width="1"/>
+    <text x="110" y="68" font-family="monospace" font-size="8" fill="#00ffff">APY</text>
+    <text x="110" y="85" font-family="monospace" font-size="14" fill="#00ffff">12.5%</text>
+    
+    <rect x="200" y="50" width="85" height="50" rx="5" fill="rgba(147,51,234,0.2)" stroke="#9333ea" stroke-width="1"/>
+    <text x="205" y="68" font-family="monospace" font-size="8" fill="#9333ea">LOANS</text>
+    <text x="205" y="85" font-family="monospace" font-size="14" fill="#9333ea">1,234</text>
+    
+    <!-- Chart Area -->
+    <rect x="10" y="110" width="280" height="40" rx="5" fill="rgba(255,255,255,0.05)"/>
+    <!-- Simple line chart -->
+    <polyline points="20,140 50,130 80,135 110,125 140,120 170,115 200,110 230,105 260,100 280,95" 
+              fill="none" stroke="#00ffff" stroke-width="2" opacity="0.8"/>
+  </g>
+  
+  <!-- Floating particles -->
+  <circle cx="350" cy="30" r="2" fill="#00ffff" opacity="0.6">
+    <animate attributeName="cy" values="30;50;30" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="30" cy="200" r="1.5" fill="#ff1493" opacity="0.7">
+    <animate attributeName="cx" values="30;60;30" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="380" cy="180" r="1" fill="#9333ea" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

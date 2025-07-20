@@ -1,0 +1,75 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bridgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9333ea;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#00ffff;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#ff1493;stop-opacity:0.3" />
+    </linearGradient>
+    <pattern id="circuitPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="2" fill="none" stroke="#00ffff" stroke-width="0.5" opacity="0.3"/>
+      <line x1="0" y1="20" x2="40" y2="20" stroke="#00ffff" stroke-width="0.3" opacity="0.2"/>
+      <line x1="20" y1="0" x2="20" y2="40" stroke="#00ffff" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="240" fill="#0a0a0a"/>
+  <rect width="400" height="240" fill="url(#bridgeGradient)"/>
+  <rect width="400" height="240" fill="url(#circuitPattern)"/>
+  
+  <!-- Cross-Chain Bridge Interface -->
+  <g transform="translate(50, 40)">
+    <!-- Main Container -->
+    <rect x="0" y="0" width="300" height="160" rx="10" fill="rgba(255,255,255,0.1)" stroke="#9333ea" stroke-width="1" opacity="0.9"/>
+    
+    <!-- Header -->
+    <rect x="10" y="10" width="280" height="20" rx="4" fill="rgba(147,51,234,0.2)"/>
+    <text x="20" y="23" font-family="monospace" font-size="10" fill="#9333ea">Cross-Chain Bridge</text>
+    
+    <!-- Source Chain -->
+    <g transform="translate(20, 40)">
+      <rect x="0" y="0" width="100" height="80" rx="8" fill="rgba(0,255,255,0.2)" stroke="#00ffff" stroke-width="1"/>
+      <text x="10" y="15" font-family="monospace" font-size="8" fill="#00ffff">Ethereum</text>
+      <circle cx="50" cy="35" r="15" fill="rgba(0,255,255,0.3)" stroke="#00ffff" stroke-width="2"/>
+      <text x="45" y="40" font-family="monospace" font-size="8" fill="#00ffff">ETH</text>
+      <rect x="10" y="55" width="80" height="15" rx="3" fill="rgba(255,255,255,0.1)"/>
+      <text x="15" y="65" font-family="monospace" font-size="7" fill="#00ffff">Balance: 5.0 ETH</text>
+    </g>
+    
+    <!-- Bridge Arrow -->
+    <g transform="translate(140, 70)">
+      <line x1="0" y1="10" x2="40" y2="10" stroke="#ff1493" stroke-width="3" opacity="0.8"/>
+      <polygon points="35,5 45,10 35,15" fill="#ff1493" opacity="0.8"/>
+      <circle cx="20" cy="10" r="8" fill="rgba(255,20,147,0.2)" stroke="#ff1493" stroke-width="1">
+        <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="15" y="14" font-family="monospace" font-size="6" fill="#ff1493">⚡</text>
+    </g>
+    
+    <!-- Destination Chain -->
+    <g transform="translate(180, 40)">
+      <rect x="0" y="0" width="100" height="80" rx="8" fill="rgba(147,51,234,0.2)" stroke="#9333ea" stroke-width="1"/>
+      <text x="10" y="15" font-family="monospace" font-size="8" fill="#9333ea">Polygon</text>
+      <circle cx="50" cy="35" r="15" fill="rgba(147,51,234,0.3)" stroke="#9333ea" stroke-width="2"/>
+      <text x="42" y="40" font-family="monospace" font-size="8" fill="#9333ea">MATIC</text>
+      <rect x="10" y="55" width="80" height="15" rx="3" fill="rgba(255,255,255,0.1)"/>
+      <text x="15" y="65" font-family="monospace" font-size="7" fill="#9333ea">Balance: 0.0 ETH</text>
+    </g>
+    
+    <!-- Transaction Details -->
+    <rect x="10" y="130" width="280" height="20" rx="4" fill="rgba(255,255,255,0.05)"/>
+    <text x="15" y="142" font-family="monospace" font-size="7" fill="#00ffff">Amount: 1.5 ETH</text>
+    <text x="100" y="142" font-family="monospace" font-size="7" fill="#ff1493">Fee: 0.01 ETH</text>
+    <text x="180" y="142" font-family="monospace" font-size="7" fill="#9333ea">Time: ~2 min</text>
+  </g>
+  
+  <!-- Network connections -->
+  <g opacity="0.4">
+    <line x1="30" y1="30" x2="80" y2="60" stroke="#00ffff" stroke-width="1"/>
+    <line x1="320" y1="50" x2="370" y2="80" stroke="#9333ea" stroke-width="1"/>
+    <line x1="50" y1="200" x2="100" y2="180" stroke="#ff1493" stroke-width="1"/>
+    <circle cx="30" cy="30" r="3" fill="#00ffff" opacity="0.6"/>
+    <circle cx="370" cy="80" r="3" fill="#9333ea" opacity="0.6"/>
+    <circle cx="50" cy="200" r="3" fill="#ff1493" opacity="0.6"/>
+  </g>
+</svg>
