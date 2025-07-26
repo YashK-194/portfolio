@@ -20,7 +20,7 @@ export default function Contact() {
     {
       name: "LinkedIn",
       value: "Connect with me",
-      href: "https://linkedin.com/in/yashkumar",
+      href: "https://linkedin.com/in/yashk194",
       icon: "💼",
       color: "from-blue-500 to-purple-500",
       description: "Professional network",
@@ -28,7 +28,7 @@ export default function Contact() {
     {
       name: "GitHub",
       value: "View my repositories",
-      href: "https://github.com/yashkumar",
+      href: "https://github.com/YashK-194",
       icon: "🚀",
       color: "from-purple-500 to-pink-500",
       description: "Code & open source",
@@ -36,7 +36,7 @@ export default function Contact() {
     {
       name: "LeetCode",
       value: "Coding challenges",
-      href: "https://leetcode.com/yashkumar",
+      href: "https://leetcode.com/u/YashKm_194/ ",
       icon: "⚡",
       color: "from-orange-500 to-red-500",
       description: "Problem solving skills",
@@ -44,7 +44,7 @@ export default function Contact() {
     {
       name: "Stack Overflow",
       value: "Community contributions",
-      href: "https://stackoverflow.com/users/yashkumar",
+      href: "https://stackoverflow.com/users/22384694/yash-kumar",
       icon: "🔥",
       color: "from-yellow-500 to-orange-500",
       description: "Tech Q&A community",
