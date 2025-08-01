@@ -185,6 +185,30 @@ export default function Projects() {
       network: "Web Application",
     },
     {
+      title: "FinFluence",
+      category: "Social Investment Platform",
+      description:
+        "A revolutionary social media platform that enables users to discover, invest in, and collaborate on innovative projects, ideas, and startups. Built with Next.js and Firebase, FinFluence combines social networking with investment opportunities, featuring project showcases, real-time collaboration tools, investor matching, and community-driven funding. The platform provides a seamless experience for entrepreneurs to present their ideas and for investors to find promising ventures.",
+      technologies: [
+        "Next.js",
+        "Firebase",
+        "React.js",
+        "Firestore",
+        "Firebase Auth",
+      ],
+      features: [
+        "Project Investment Platform",
+        "Social Networking Features",
+        "Real-time Collaboration",
+        "Investor Matching System",
+      ],
+      status: "Live",
+      image: "/projects/finfluence.png",
+      demoUrl: "https://finfluence-yashk.vercel.app",
+      githubUrl: "https://github.com/YashK-194/finfluence",
+      network: "Web Application",
+    },
+    {
       title: "DemoStore",
       category: "E-commerce Platform",
       description:
@@ -287,6 +311,11 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
+          <div className="inline-block mb-4">
+            <span className="text-lg text-cyan-400 font-mono tracking-wider opacity-80">
+              &gt; const projects = await fetchMyWork();
+            </span>
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-white to-pink-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
@@ -370,57 +399,56 @@ export default function Projects() {
                       backgroundPosition: "center",
                     }}
                   >
-                    {/* Overlay for better text readability */}
-                    <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
-
-                    {/* Project Icon/Preview */}
-                    <div className="relative z-10 text-center">
-                      <div className="w-16 h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center mb-3 mx-auto">
-                        {activeTab === "blockchain" ? (
-                          <svg
-                            className="w-8 h-8 text-cyan-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                            />
-                          </svg>
-                        ) : (
-                          <svg
-                            className="w-8 h-8 text-pink-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
-                            />
-                          </svg>
-                        )}
+                    {/* Category Badge in Bottom Left */}
+                    <div className="absolute bottom-4 left-4 z-10">
+                      <div className="bg-black/60 backdrop-blur-md border border-white/20 rounded-lg px-3 py-2 flex items-center gap-2">
+                        <div className="w-8 h-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center">
+                          {activeTab === "blockchain" ? (
+                            <svg
+                              className="w-4 h-4 text-cyan-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                              />
+                            </svg>
+                          ) : (
+                            <svg
+                              className="w-4 h-4 text-pink-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
+                              />
+                            </svg>
+                          )}
+                        </div>
+                        <span className="text-sm text-white font-medium">
+                          {project.category}
+                        </span>
                       </div>
-                      <span className="text-sm text-white/80 font-medium">
-                        {project.category}
-                      </span>
                     </div>
 
-                    {/* Status Badge on Image */}
-                    <div className="absolute top-4 right-4">
+                    {/* Status Badge in Top Right */}
+                    <div className="absolute top-4 right-4 z-10">
                       <span
                         className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-md border ${
                           project.status === "Live on Mainnet" ||
                           project.status === "Live"
-                            ? "bg-green-500/20 text-green-400 border-green-500/30"
+                            ? "bg-green-500/20 text-green-300 border-green-400/30"
                             : project.status === "In Development"
-                            ? "bg-yellow-500/20 text-yellow-400 border-yellow-500/30"
-                            : "bg-blue-500/20 text-blue-400 border-blue-500/30"
+                            ? "bg-yellow-500/20 text-yellow-300 border-yellow-400/30"
+                            : "bg-blue-500/20 text-blue-300 border-blue-400/30"
                         }`}
                       >
                         {project.status}
@@ -523,8 +551,15 @@ export default function Projects() {
         {/* View All Projects Button */}
         <div className="text-center mt-16">
           <button
-            onClick={() => (window.location.href = "/projects")}
-            className="px-8 py-4 bg-gradient-to-r from-cyan-500/20 to-pink-500/20 border border-cyan-400/30 text-white rounded-full font-medium text-lg hover:from-cyan-500/30 hover:to-pink-500/30 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all transform hover:scale-105 backdrop-blur-md"
+            onClick={(e) => {
+              e.target.classList.add("cta-button-click");
+              setTimeout(
+                () => e.target.classList.remove("cta-button-click"),
+                800
+              );
+              window.location.href = "/projects";
+            }}
+            className="px-8 py-4 bg-gradient-to-r from-cyan-500/20 to-pink-500/20 border border-cyan-400/30 text-white rounded-full font-medium text-lg hover:from-cyan-500/30 hover:to-pink-500/30 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all transform hover:scale-105 backdrop-blur-md interactive-element"
           >
             <span className="flex items-center justify-center gap-2">
               <svg

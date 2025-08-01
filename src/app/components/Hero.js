@@ -114,24 +114,28 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <button
-            onClick={() =>
+            onClick={(e) => {
+              e.target.classList.add('cta-button-click');
+              setTimeout(() => e.target.classList.remove('cta-button-click'), 800);
               document
                 .getElementById("projects")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-pink-500 text-black rounded-full font-medium text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all transform hover:scale-105 w-full sm:w-auto border border-cyan-400 cyberpunk-button"
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-pink-500 text-black rounded-full font-medium text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all transform hover:scale-105 w-full sm:w-auto border border-cyan-400 cyberpunk-button interactive-element"
           >
             <span className="flex items-center justify-center gap-2">
               🚀 View My Work
             </span>
           </button>
           <button
-            onClick={() =>
+            onClick={(e) => {
+              e.target.classList.add('cta-button-click');
+              setTimeout(() => e.target.classList.remove('cta-button-click'), 800);
               document
                 .getElementById("contact")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className="px-8 py-4 border-2 border-pink-500 text-pink-400 rounded-full font-medium text-lg hover:bg-pink-500 hover:text-black hover:shadow-2xl hover:shadow-pink-500/50 transition-all transform hover:scale-105 w-full sm:w-auto cyberpunk-button-outline"
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-8 py-4 border-2 border-pink-500 text-pink-400 rounded-full font-medium text-lg hover:bg-pink-500 hover:text-black hover:shadow-2xl hover:shadow-pink-500/50 transition-all transform hover:scale-105 w-full sm:w-auto cyberpunk-button-outline interactive-element"
           >
             <span className="flex items-center justify-center gap-2">
               📡 Get In Touch
