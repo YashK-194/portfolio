@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState("web");
+  const [activeTab, setActiveTab] = useState("blockchain");
 
   const blockchainProjects = [
     {
