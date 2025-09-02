@@ -218,6 +218,12 @@ export default function Navigation() {
               >
                 About
               </button>
+              <Link
+                href="https://github.com/YashK-194/"
+                className="hover:text-foreground/80 transition-colors text-sm font-medium interactive-element"
+              >
+                Github
+              </Link>
               <button
                 onClick={(e) => handleNavClick(e, "projects")}
                 className="hover:text-foreground/80 transition-colors text-sm font-medium interactive-element"

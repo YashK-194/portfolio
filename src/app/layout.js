@@ -13,7 +13,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Yash Kumar - Blockchain Developer & Full Stack Engineer",
-  description: "Passionate blockchain developer specializing in smart contracts, DeFi protocols, and modern web applications. Building the future of Web3.",
+  description:
+    "Passionate blockchain developer specializing in smart contracts, DeFi protocols, and modern web applications. Building the future of Web3.",
 };
 
 export default function RootLayout({ children }) {
