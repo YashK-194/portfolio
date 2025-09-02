@@ -293,6 +293,12 @@ export default function Navigation() {
           >
             About
           </button>
+          <Link
+            href="https://github.com/YashK-194/"
+            className="hover:text-foreground/80 transition-colors text-sm font-medium interactive-element"
+          >
+            Github
+          </Link>
           <button
             onClick={(e) => handleNavClick(e, "projects")}
             className="block px-3 py-2 text-base font-medium hover:bg-foreground/10 w-full text-left transition-colors interactive-element"
